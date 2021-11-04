@@ -4,6 +4,12 @@ import Header from './components/Header';
 import Image from './components/Image';
 import Footer from './components/Footer';
 import axios from "axios";
+import styled from "styled-components";
+
+const BackgroundStyle = styled.div`
+  background-color: black;
+  color: white;
+`
 
 function App() {
   const [nasaInfo, setNasaInfo] = useState('');
@@ -19,7 +25,7 @@ function App() {
   }, [])
 
     return (
-      <div className="App">
+      <BackgroundStyle className="App">
         {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
@@ -27,7 +33,7 @@ function App() {
         <Header nasaDate={nasaInfo} />
         <Image nasaTitle={nasaInfo} nasaImg={nasaInfo} nasaExplanation={nasaInfo} />
         <Footer nasaCopyright={nasaInfo} />
-      </div>
+      </BackgroundStyle>
     );
 }
 

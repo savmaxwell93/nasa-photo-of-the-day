@@ -1,4 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FooterStyle = styled.div`
+    font-size: .8rem;
+    font-family: 'Merriweather', serif;
+`
 
 const Footer = (props) => {
 
@@ -6,7 +12,9 @@ const Footer = (props) => {
 
 
     return (
-        <p>Image By: {nasaCopyright.copyright}</p>
+        <FooterStyle>
+            <p>Image By: {nasaCopyright.copyright}</p>
+        </FooterStyle>
     )
 }
 
